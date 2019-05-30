@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RWD</title>
+    <style>
+        html, body {
+            height: 100%;
+            word-break: break-all;
+        }            
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header {
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (max-width:991px){
+            header {
+                height: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            header:before {
+                content: '\A';
+                width: 100%;
+                height: 50%;
+                display: block;
+                background: black url('images/man-1.jpg') no-repeat center right;
+                background-size: cover;
+            }
+        }
+        @media (min-width:992px) and (max-width: 1169px){
+            header {
+                height: 70%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            header:before {
+                content: '\A';
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: black url('images/man-2.jpg') no-repeat center right;
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+            }
+            .text_container {
+                position: absolute;
+                z-index: 2;
+                color: #fff;
+                text-align: left;
+                right: 60px;
+                top: 30px;
+            }
+        }
+        @media (min-width:1170px){            
+            header {
+                height: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            header:before {
+                content: '\A';
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: black url('images/man-1.jpg') no-repeat center right;
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+            }
+            .text_container {
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                text-align: left;
+                position: relative;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="text_container">
+            <h2>I am the best</h2>
+            <h1>Front end devloper</h1>
+        </div>
+    </header>
+</body>
+</html>
